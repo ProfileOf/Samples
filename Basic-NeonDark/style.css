@@ -231,10 +231,10 @@ span {
 
 @keyframes words {
     0%, 20% {
-        content: "Aspiring Frontend Designer";
+        content: "Aspiring Frontend";
     }
     21%, 40% {
-        content: "Entry-Level Designer";
+        content: "Entry Designer";
     }
     41%, 60% {
         content: "Writer";
