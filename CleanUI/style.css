@@ -381,6 +381,10 @@ header {
       flex-direction: column;
     }
 
+    .projects-grid{
+      display: flex;
+      flex-direction: column;
+    }
     .footer-col {
       flex: 1 1 calc(33.333% - 2rem);
     }
