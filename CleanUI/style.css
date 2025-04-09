@@ -8,6 +8,7 @@
     list-style: none;
 }
 
+/* HEADER */
 header {
     position: fixed;
     top: 1rem;
@@ -88,7 +89,7 @@ header {
   }
 
 
-  /* ABout */
+  /* ABOUT */
   section {
     min-height: 100vh;
     padding: 8rem 12%;
@@ -172,14 +173,7 @@ header {
     transform: scale(1.1)
   }
 
-
-  .section-title {
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 600;
-    margin-bottom: 3rem;
-  }
-
+  /* PROFIL */
   .profil-info {
     display: flex;
     align-items: flex-start;
@@ -198,7 +192,7 @@ header {
     gap: 2rem;
   }
   
-  
+  /* EXPERIENCE */
   .experience-info {
     display: flex;
     align-items: center;
@@ -209,6 +203,14 @@ header {
   .experience img {
     width: 24vw;
     border-radius: 3rem;
+  }
+
+  /* EXP - INF */
+  .section-title {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
   }
   .grid {
     display: grid;
@@ -258,7 +260,7 @@ header {
     background: linear-gradient(to bottom, #009dff, #ff00ff);
   }
 
-
+  /* PROJECTS */
   .projects-grid{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
@@ -312,3 +314,153 @@ header {
   }
 
 
+/* FOOTER */
+
+  footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    color: white;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    color: white;
+  }
+
+  footer span {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  footer a {
+    color: white;
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* setara dengan gy-5 */
+  }
+  
+  .footer-col {
+    flex: 1 1 100%; /* default full width (col-12) */
+    padding: 1rem;
+    flex: 1 1 calc(33.333% - 2rem);
+  }
+
+  
+  .sosmed-row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .sosmed-icon img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* MEDIA */
+  @media(max-width:1280px) {
+    header {
+      padding: 1rem 2rem;
+      gap: 2rem;
+    }
+    .about .about-container{
+      gap: 3rem;
+    }
+    .profil-info {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .experience-info {
+      flex-direction: column;
+    }
+
+    .footer-col {
+      flex: 1 1 calc(33.333% - 2rem);
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    header {
+      gap: 1rem;
+      padding: 1rem 2rem;
+    }
+    header .logo{
+      font-size:  1rem;
+    }
+    header .visit-btn {
+      display: none;
+    }
+
+    .about-container{
+      flex-direction: column;
+    }
+    .about img{
+      width: 40vw;
+    }
+    
+    .grid {
+      grid-template-columns: 1fr;
+    }
+    .experience-info img, .profil img {
+      width: 70vw;
+    }
+
+    .project-card img {
+      width: 60vw;
+      border-radius: 1rem;
+    }
+
+    .footer-col {
+      flex: 1 1 calc(33.333% - 2rem);
+    }
+  }
+
+  @media (max-width:600px) {
+    header #menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 100%;
+      margin-top: 1rem;
+      width: 100%;
+      padding: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.9);
+      border-radius: 3rem;
+      display: none;
+    }
+  
+    .nav-links li {
+      margin-top: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: block;
+    }
+    header{
+      padding: 1rem 5rem;
+      gap: 8rem;
+    }
+    header .logo {
+      font-size: 1.5rem;
+    }
+    .about-container img {
+      width: 80vw;
+    }
+    
+  }
+  
