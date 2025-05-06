@@ -291,7 +291,6 @@ span {
 .timeline-items {
     max-width: 1200px;
     margin: auto;
-    margin-top: 1200px
     display: flex;
     flex-wrap: wrap;
     position: relative;

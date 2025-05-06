@@ -641,10 +641,12 @@ section{
     .navigation.active{
         z-index: 889;
         position: fixed;
-        background-color: white;
+        backdrop-filter: blur(6px) saturate(200%);
+        -webkit-backdrop-filter: blur(6px) saturate(200%);
+        background-color: rgba(255, 255, 255, 0.41);
         top: 0;
         right: 0;
-        width: 380px;
+        width: 250px;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -668,21 +670,20 @@ section{
         transition: 0.3s ease;
     }
 
-    /* .menu-btn{
+    .menu-btn{
         position: absolute;
-        background-image: url(Image/menu.png);
         background-position: center;
-        background-size: 30px;
-        background-repeat: no-repeat;
         width: 40px;
         height: 40px;
         right: 0;
         margin: 0 20px;
+        /* background: red; */
+        color: white;
         cursor: pointer;
         transition: 0.3s ease;
     }
 
-    .menu-btn.active{
+    /* .menu-btn.active{
         z-index: 999;
         background-image: url(Image/close.png);
         background-repeat: no-repeat;
@@ -782,16 +783,28 @@ section{
     #menu-btn {
       display: block;
       cursor: pointer;
-      color: white;
+      color: red;
       font-size: 1.5rem;
       z-index: 889;
     }
   }
 
   #menu-btn.active {
-    color: #3a6cf4;
-    transform: rotate(90deg);
+    color: black;
+    transform: rotate(180deg);
     transition: 0.3s ease;
+    z-index: 999;
+    background-image: url(Image/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25px;
+    transition: 0.3s ease;
+    filter: invert(1);
+}
+.hamburger-btn{
+    color: white;
+    width: auto;
+    height:40px;
 }
 
 
